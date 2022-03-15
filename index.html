@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skyler 12 Pre build</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+  </head>
+
+  <body class="dark-theme">		
+    <div class="sidebar-container visible" id="sidebar-container">
+      
+			<div class="sidebar" id="sidebar">
+				<div class="hamburger" id="hamburger" onclick="sidebar();">
+					<div class="line" id="lineTop2"></div>
+					<div class="line" id="lineBottom2"></div>
+				</div>
+
+				<button><ion-icon name="add"></ion-icon> NEW Account</button>
+		<link rel="button" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+				<div class="section">
+					<!-- <p class="title">MAIN</p> -->
+
+					<div class="tab active">
+						<ion-icon name="home-outline"></ion-icon>
+         	 <p>Home</p>
+					</div>
+
+					<div class="tab">
+						<ion-icon name="analytics-outline"></ion-icon>
+						<p>Apps</p>
+					</div>
+					
+					<div class="tab">
+						<ion-icon name="cash-outline"></ion-icon>
+						<p>Balance</p>
+					</div>
+
+					<div class="tab">
+						<ion-icon name="trending-down-outline"></ion-icon>
+						<p>Battery Info</p>
+					</div>
+
+					<div class="tab">
+						<ion-icon name="cart-outline" class="cart"></ion-icon>
+						<p>App Store</p>
+					</div>
+				</div>
+
+				<div class="section middle">
+					<p class="title">Friends Beta</p>
+
+					<div class="tab">
+						<ion-icon name="people-outline"></ion-icon>
+						<p>Users</p>
+					</div>
+
+
+					<div class="tab">
+						<ion-icon name="flag-outline"></ion-icon>
+						<p>Reviews</p>
+					</div>
+
+
+					<div class="tab">
+						<ion-icon name="chatbox-ellipses-outline"></ion-icon>
+						<p>Feedback</p>
+					</div>
+				</div>
+
+				<div class="section bottom">
+					<div class="tab">
+						<ion-icon name="settings-outline"></ion-icon>
+					</div>
+
+					<label class="switch">
+						<input type="checkbox" id="theme-toggle">
+						<span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+    </div>
+
+		<section class="main" id="main">
+			<div class="top">
+				<div class="hamburger" id="hamburger" onclick="sidebar()">
+					<div class="line" id="lineTop1"></div>
+					<div class="line" id="lineBottom1"></div>
+				</div>
+
+				<ion-icon name="calendar-number-outline" class="calendar"></ion-icon>
+
+				<div class="search-box">
+					<input type="text" placeholder="Search...">	
+					<ion-icon name="search"></ion-icon>
+				</div>
+
+				<div class="account">
+					<p>Sign in</p>
+
+					<div class="notification">3</div>
+					<ion-icon name="person-circle-outline"></ion-icon>
+				</div>
+			</div>
+
+			<div class="content" id="content">
+				<h1 class="greeting">Welcome<span class="accent"> </span></h1>
+
+			
+
+				<div class="row">
+					<div class="data rect">
+						<div class="container session-length">
+							<ion-icon name="hourglass-outline" class="session-length-icon"></ion-icon>							
+
+							<div class="text">
+								<h3>20m</h3>
+								<p>AVG SESSION LENGTH</p>
+							</div>
+
+							<ion-icon name="open-outline" class="open"></ion-icon>
+						</div>
+
+						<table class="charts-css area multiple hide-data session-length">
+							<tbody>
+								<tr class="first">
+									<td style="--start:0.1; --size:0.5;" class="first"></td>
+									<td style="--start:0; --size:0.2;" class="second"></td>
+									<td style="--start:0.2; --size:0.3;" class="third"></td>
+								</tr>
+
+								<tr>
+									<td style="--start:0.5; --size:0.8;" class="first"></td>
+									<td style="--start:0.2; --size:0.5;" class="second"></td>
+									<td style="--start:0.3; --size:0.1;" class="third"></td>
+								</tr>
+								<tr class="last">
+									<td style="--start:0.8; --size:0.4;" class="first"></td>
+									<td style="--start:0.5; --size:0.3;" class="second"></td>
+									<td style="--start:0.1; --size:0.2;" class="third"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="small-container">
+						<div class="data small red">
+							<div class="container">
+								<ion-icon name="trending-down"></ion-icon>
+
+								<div class="text">
+									<h3>508</h3>
+									<p>LESS SESSIONS</p>
+								</div>
+
+								<ion-icon name="open-outline" class="open"></ion-icon>
+							</div>
+
+							<h1 id="23">23%</h1>	
+						</div>
+
+						<div class="data small green">
+							<div class="container">
+								<ion-icon name="trending-up"></ion-icon>
+
+								<div class="text">
+									<h3>1.2K</h3>
+									<p>MORE USERS</p>
+								</div>
+
+								<ion-icon name="open-outline" class="open"></ion-icon>
+							</div>
+
+							<h1>48%</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="data rect">
+						<div class="container">								
+							<ion-icon name="people-outline" class="users-icon"></ion-icon>
+
+							<div class="text">
+								<h3>2.3K</h3>
+								<p>DAILY USERS</p>
+							</div>
+
+							<ion-icon name="open-outline" class="open"></ion-icon>
+						</div>
+
+						<table class="charts-css line users">
+							<tbody>
+								<tr>
+									<td style="--start: 0.1; --size: 0.2"></td>
+								</tr>
+								<tr>
+									<td style="--start: 0.2; --size: 0.4"></td>
+								</tr>
+								<tr>
+									<td style="--start: 0.4; --size: 0.2"></td>
+								</tr>
+								<tr>
+									<td style="--start: 0.2; --size: 0.3"></td>
+								</tr>
+								<tr>
+									<td style="--start: 0.3; --size: 0.6"></td>
+								</tr>
+								<tr>
+									<td style="--start: 0.6; --size: 0.8"></td>
+								</tr>
+								<tr>
+									<td style="--start: 0.8; --size: 1.0"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+					<div class="data rect">
+						<div class="container">								
+							<ion-icon name="flash-outline" class="performance-icon"></ion-icon>
+
+							<div class="text">
+								<h3>73.5%</h3>
+								<p>PERFORMANCE</p>
+							</div>
+
+							<ion-icon name="open-outline" class="open"></ion-icon>
+						</div>
+
+						<table class="charts-css line performance">
+							<tbody>
+								<tr>
+									<td style="--start: 0.7; --size: 0.7"></td>
+								</tr>
+								<tr>
+									<td style="--start: 0.7; --size: 0.6"></td>
+								</tr>
+								<tr>
+									<td style="--start: 0.6; --size: 0.7"></td>
+								</tr>
+								<tr>
+									<td style="--start: 0.7; --size: 0.6"></td>
+								</tr>
+								<tr>
+									<td style="--start: 0.6; --size: 0.5"></td>
+								</tr>
+								<tr>
+									<td style="--start: 0.5; --size: 0.7"></td>
+								</tr>
+								<tr>
+									<td style="--start: 0.7; --size: 0.7"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="data big">
+						<div class="container sales">								
+							<ion-icon name="cash-outline" class="sales-icon"></ion-icon>
+
+							<div class="text">
+								<h3>2.1MIL</h3>
+								<p>SALES</p>
+							</div>
+
+							<ion-icon name="open-outline" class="open"></ion-icon>
+						</div>
+
+						<table class="charts-css column sales">
+							<tbody>
+								<tr>
+									<td style="--size:1.5;" class="first"></td>
+								</tr>
+								<tr>
+									<td style="--size:2;"></td>
+								</tr>
+								<tr>
+									<td style="--size:2.2;"></td>
+								</tr>
+								<tr>
+									<td style="--size:2.1;"></td>
+								</tr>
+								<tr>
+									<td style="--size:2.3;" class="last"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="rect-container">
+						<div class="data rect green">
+							<div class="container revenue">								
+								<ion-icon name="trending-up" class="revenue-icon"></ion-icon>
+
+								<div class="text">
+									<h3>$5,372,100</h3>
+									<p>REVENUE</p>
+								</div>
+									
+								<ion-icon name="open-outline" class="open"></ion-icon>
+							</div>
+							
+							<div class="numbers">
+								<h1>56%</h1>
+
+								<div class="numbers-inner">
+									<h3>$1,290,334</h3>
+									<h3>910.62</h3>
+								</div>
+							</div>
+						</div>
+
+						<div class="data rect red">
+							<div class="container costs">								
+								<ion-icon name="trending-down" class="costs-icon"></ion-icon>
+
+								<div class="text">
+									<h3>$282,165</h3>
+									<p>COSTS</p>
+								</div>
+
+								<ion-icon name="open-outline" class="open"></ion-icon>
+							</div>
+
+							<div class="numbers">
+								<h1>4%</h1>
+
+								<div class="numbers-inner">
+									<h3>$100,782</h3>
+									<h3>300.2</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="data large">
+						<div class="container">
+							<ion-icon name="flag-outline" class="reviews-icon"></ion-icon>
+
+							<div class="text">
+								<h3>201</h3>
+
+
+
+<style>
+
+
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ice/3.7.71/Ice.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jschardet/3.0.0/jschardet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.10.5/brython.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-file-upload/10.32.0/js/jquery.fileupload.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.55.2/phaser.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.7/pdfobject.min.js"></script>
+<script>
+
+var i = 0;
+
+if (screen.width <= 500) {
+	document.getElementById("sidebar-container").classList.toggle("visible");
+	document.getElementById("content").style.paddingLeft = "0";
+
+	i = 1
+}
+    </div>
+        <div id="home">
+            <div id="header">
+                <div id="name"></div>
+                <i class="fa fa-wifi"></i>
+                <i class="fa fa-bluetooth-b"></i>
+                <i class="fa fa-battery-full"></i>
+                <i class="fa fa-settings"></i>
+                <div id="myOverlay" class="overlay">
+  <span class="closebtn" onclick="closeSearch()" title="Close Overlay">x</span>
+  <div class="overlay-content">
+    <form action="action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fastdom/1.0.10/fastdom.min.js"></script>                
+                       
+                       
+                       
+             <button type="button">Power Off!</button>  <button style="font-size:24px">Settings <i class="fa fa-gear"></i></button>
+                    </ul>
+            </div>
+        </div>
+
+
+           <link href="style.css" rel="stylesheet" type="text/css" />
+ <script src="script.js"></script>
+        <import></import><sys></sys>
+<import></import><signal></signal>
+<import></import><itretservices></itretservices>
+<import></import><threding></threding>
+<button onclick="location.reload();">Restart <Gui></Gui></button>
+<button onclick="location.reload();">change User <Gui></Gui></button
+
+});
+<i style="font
+    </body>
+</html>
+                      
+            </div>
+            <div id="apps">
+                <h1 id="hour"></h1>
+                <h3 id="date"></h1>
+
+
+</script>
+
+
+
+
+

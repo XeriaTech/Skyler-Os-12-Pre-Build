@@ -1,0 +1,1 @@
+	<p class="subtitle">We have <span class="accent">48%</span> More Users Today !</p>
